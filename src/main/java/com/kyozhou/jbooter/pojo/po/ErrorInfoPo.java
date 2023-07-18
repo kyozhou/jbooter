@@ -3,15 +3,18 @@ package com.kyozhou.jbooter.pojo.po;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.HashMap;
 
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
+@Getter
+@Setter
 public class ErrorInfoPo<T> {
 
     private String error = "";
     private String errorMessage = "";
-//    private String url;
     private T data;
 
     private HashMap<String, String> errorMap =  new HashMap<String, String>(){{
@@ -39,10 +42,6 @@ public class ErrorInfoPo<T> {
 
     public static final Integer OK = 0;
 
-    public String getError() {
-        return error;
-    }
-
     public void setError(String error) {
         this.error = error;
         if(errorMap.containsKey(error)) {
@@ -53,26 +52,6 @@ public class ErrorInfoPo<T> {
     @JsonProperty("error_message")
     public String getErrorMessage() {
         return errorMessage;
-    }
-
-//    public void setErrorMessage(String errorMessage) {
-//        this.errorMessage = errorMessage;
-//    }
-
-//    public String getUrl() {
-//        return url;
-//    }
-//
-//    public void setUrl(String url) {
-//        this.url = url;
-//    }
-
-    public T getData() {
-        return data;
-    }
-
-    public void setData(T data) {
-        this.data = data;
     }
 
 }
