@@ -1,0 +1,9 @@
+spring:
+    profiles:
+        active: local
+server:
+    port: 9019
+mybatis:
+    configuration:
+        mapUnderscoreToCamelCase: true
+

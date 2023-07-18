@@ -1,0 +1,16 @@
+server.port=9019
+spring.datasource.url=jdbc:mariadb://127.0.0.1:3306/ms_report
+spring.datasource.username=root
+spring.datasource.password=x3ZVbDv*5W
+spring.datasource.driver-class-name=org.mariadb.jdbc.Driver
+
+spring.data.mongodb.uri=mongodb://admin:UxRq$mvn6*@127.0.0.1:27017
+spring.data.mongodb.database=ms_report
+spring.data.mongodb.authentication-database=admin
+
+
+
+beacon.url=http://127.0.0.1:9014
+
+#microservice.organization.url=http://127.0.0.1:8081
+

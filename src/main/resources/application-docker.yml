@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:mariadb://mariadb.mic.svc.cluster.local:3306/ms_report
+    username: "root"
+    password: "123456"
+    driver-class-name: org.mariadb.jdbc.Driver
+  data:
+    mongodb:
+      uri: mongodb://admin:123456@mongodb-svc.mic.svc.cluster.local:27017
+      database: ms_report
+      authentication-database: admin
+beacon:
+  url: http://beacon2.mic.svc.cluster.local:9014
+
+#microservice.organization.url=http://127.0.0.1:8081
+
