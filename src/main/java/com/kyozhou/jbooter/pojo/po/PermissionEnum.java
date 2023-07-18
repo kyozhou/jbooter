@@ -1,4 +1,4 @@
-package com.kyozhou.jbooter.service.po;
+package com.kyozhou.jbooter.pojo.po;
 
 public enum PermissionEnum {
     REPORT_SERVICE,

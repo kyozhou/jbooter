@@ -1,8 +1,8 @@
 package com.kyozhou.jbooter.service;
 
-import com.kyozhou.jbooter.service.po.PermissionEnum;
-import com.kyozhou.jbooter.service.po.TokenPo;
-import com.kyozhou.jbooter.config.HttpException;
+import com.kyozhou.jbooter.pojo.po.PermissionEnum;
+import com.kyozhou.jbooter.pojo.po.TokenPo;
+import com.kyozhou.jbooter.system.config.HttpException;
 
 public interface OrganizationService {
 

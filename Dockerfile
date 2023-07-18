@@ -1,5 +1,5 @@
 FROM openjdk:8-jdk-alpine
-MAINTAINER zhoubin@mirahome.me
+MAINTAINER kyozhou@sina.com
 EXPOSE 9019
-COPY target/ms_report.jar /ms_report.jar
-ENTRYPOINT ["java","-jar","/ms_report.jar", "--spring.profiles.active=docker"]
+COPY "target/jbooter-1.0.jar" /jbooter.jar
+ENTRYPOINT ["java","-jar","/jbooter.jar", "--spring.profiles.active=docker"]

@@ -10,7 +10,7 @@ spring:
       database: ms_report
       authentication-database: admin
 beacon:
-  url: http://beacon2.mic.svc.cluster.local:9014
+
 
 #microservice.organization.url=http://127.0.0.1:8081
 

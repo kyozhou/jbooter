@@ -1,9 +1,9 @@
-package com.kyozhou.jbooter.service.po;
+package com.kyozhou.jbooter.pojo.po;
 
-import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
 
-@JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
+@JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
 public class TokenPo {
 
     public String getToken() {

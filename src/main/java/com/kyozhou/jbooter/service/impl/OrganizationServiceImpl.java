@@ -1,11 +1,10 @@
 package com.kyozhou.jbooter.service.impl;
 
 import com.kyozhou.jbooter.system.utils.CommonUtility;
-import com.kyozhou.jbooter.config.HttpException;
-import com.kyozhou.jbooter.service.dao.OrganizationDao;
-import com.kyozhou.jbooter.service.dao.SourceDao;
-import com.kyozhou.jbooter.service.po.PermissionEnum;
-import com.kyozhou.jbooter.service.po.TokenPo;
+import com.kyozhou.jbooter.system.config.HttpException;
+import com.kyozhou.jbooter.dao.OrganizationDao;
+import com.kyozhou.jbooter.pojo.po.PermissionEnum;
+import com.kyozhou.jbooter.pojo.po.TokenPo;
 import com.kyozhou.jbooter.service.OrganizationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,8 +16,6 @@ public class OrganizationServiceImpl implements OrganizationService {
 
     @Autowired
     private OrganizationDao organizationDao;
-    @Autowired
-    private SourceDao sourceDao;
 
     @Override
     public TokenPo generateToken(String accessKey, String clientUUID, String service, Long timestamp, String sign) throws HttpException {

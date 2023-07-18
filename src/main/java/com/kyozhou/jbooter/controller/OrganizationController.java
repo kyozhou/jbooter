@@ -1,13 +1,13 @@
 package com.kyozhou.jbooter.controller;
 
-import com.kyozhou.jbooter.service.po.TokenPo;
+import com.kyozhou.jbooter.pojo.po.TokenPo;
 import com.kyozhou.jbooter.system.constant.RegexConst;
-import com.kyozhou.jbooter.config.HttpException;
+import com.kyozhou.jbooter.system.config.HttpException;
 import com.kyozhou.jbooter.service.OrganizationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.constraints.Pattern;
+import jakarta.validation.constraints.Pattern;
 
 @RestController
 @RequestMapping("/organization")

@@ -1,7 +1,6 @@
-package com.kyozhou.jbooter.config;
+package com.kyozhou.jbooter.system.config;
 
 import com.kyozhou.jbooter.system.aop.AuthenticateInterceptor;
-import com.kyozhou.jbooter.system.aop.LoggerInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -14,10 +13,6 @@ public class HttpConfig implements WebMvcConfigurer {
     @Bean
     AuthenticateInterceptor authenticateInterceptor() {
         return new AuthenticateInterceptor();
-    }
-    @Bean
-    LoggerInterceptor loggerInterceptor() {
-        return new LoggerInterceptor();
     }
 
     @Override

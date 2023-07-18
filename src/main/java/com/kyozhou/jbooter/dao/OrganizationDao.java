@@ -1,6 +1,6 @@
-package com.kyozhou.jbooter.service.dao;
+package com.kyozhou.jbooter.dao;
 
-import com.kyozhou.jbooter.service.po.TokenPo;
+import com.kyozhou.jbooter.pojo.po.TokenPo;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;

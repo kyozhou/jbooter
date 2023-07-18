@@ -1,17 +1,17 @@
 package com.kyozhou.jbooter.controller;
 
-import com.kyozhou.jbooter.service.po.ErrorInfoPo;
+import com.kyozhou.jbooter.pojo.po.ErrorInfoPo;
 import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 
 @RestController
-public class MiraErrorController implements ErrorController {
+public class MyErrorController implements ErrorController {
 
-    @RequestMapping("/error")
+    @RequestMapping("error")
     public ErrorInfoPo<String> handleError(HttpServletRequest request){
         ErrorInfoPo<String> errorInfoPo = new ErrorInfoPo<>();
         //获取statusCode:401,404,500
@@ -24,11 +24,6 @@ public class MiraErrorController implements ErrorController {
         }else{
         }
         return errorInfoPo;
-    }
-
-    @Override
-    public String getErrorPath() {
-        return "/error";
     }
 
     @RequestMapping("custom_error")

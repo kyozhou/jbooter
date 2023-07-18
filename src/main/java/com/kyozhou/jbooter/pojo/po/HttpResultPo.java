@@ -1,4 +1,4 @@
-package com.kyozhou.jbooter.service.po;
+package com.kyozhou.jbooter.pojo.po;
 
 public class HttpResultPo<T> {
     public String getError() {

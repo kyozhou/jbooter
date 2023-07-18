@@ -1,4 +1,4 @@
-package com.kyozhou.jbooter.service.dao;
+package com.kyozhou.jbooter.dao;
 
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;

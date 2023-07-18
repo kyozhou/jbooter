@@ -1,9 +1,11 @@
-package com.kyozhou.jbooter.config;
+package com.kyozhou.jbooter.system.config;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.kyozhou.jbooter.service.po.HttpResultPo;
-import com.kyozhou.jbooter.service.po.ErrorInfoPo;
+import com.kyozhou.jbooter.pojo.po.HttpResultPo;
+import com.kyozhou.jbooter.pojo.po.ErrorInfoPo;
+import jakarta.validation.ConstraintViolation;
+import jakarta.validation.ConstraintViolationException;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -15,9 +17,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.validation.ConstraintViolation;
-import javax.validation.ConstraintViolationException;
+import jakarta.servlet.http.HttpServletRequest;
+
 import java.util.Set;
 
 @ControllerAdvice

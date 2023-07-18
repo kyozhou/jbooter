@@ -1,13 +1,13 @@
 package com.kyozhou.jbooter.system.aop;
 
-import com.kyozhou.jbooter.service.po.PermissionEnum;
-import com.kyozhou.jbooter.service.po.TokenPo;
+import com.kyozhou.jbooter.pojo.po.PermissionEnum;
+import com.kyozhou.jbooter.pojo.po.TokenPo;
 import com.kyozhou.jbooter.service.OrganizationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.HandlerInterceptor;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;

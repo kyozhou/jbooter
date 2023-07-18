@@ -1,4 +1,4 @@
-package com.kyozhou.jbooter.config;
+package com.kyozhou.jbooter.system.config;
 
 public class HttpException extends Exception {
 
