@@ -1,7 +1,7 @@
 package com.kyozhou.jbooter.system.aop;
 
 import com.kyozhou.jbooter.pojo.po.PermissionEnum;
-import com.kyozhou.jbooter.pojo.po.TokenPo;
+import com.kyozhou.jbooter.pojo.po.Token;
 import com.kyozhou.jbooter.service.OrganizationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -25,18 +25,18 @@ public class AuthenticateInterceptor implements HandlerInterceptor {
             response.sendRedirect("/custom_error?error=token_not_specified");
             return false;
         }
-        TokenPo tokenPo = organizationService.getToken(token);
+        Token tokenPo = organizationService.getToken(token);
         if (tokenPo == null) {
             response.setStatus(403);
             response.sendRedirect("/custom_error?error=token_not_exists");
             return false;
         }
-        if (!this.checkOrganizationService(request, tokenPo.getOrgUUID())) {
+        if (!this.checkOrganizationService(request, tokenPo.getOrgUuid())) {
             response.setStatus(403);
             response.sendRedirect("/custom_error?error=token_has_no_permission");
             return false;
         }
-        request.setAttribute("_org_uuid", tokenPo.getOrgUUID());
+        request.setAttribute("_org_uuid", tokenPo.getOrgUuid());
         return true;
     }
 

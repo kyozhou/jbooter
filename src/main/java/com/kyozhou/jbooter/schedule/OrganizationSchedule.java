@@ -1,15 +1,15 @@
 package com.kyozhou.jbooter.schedule;
 
 import com.kyozhou.jbooter.dao.OrganizationDao;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.scheduling.annotation.Scheduled;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
-public class OrganizationSechedule {
+@Service
+@RequiredArgsConstructor
+public class OrganizationSchedule {
 
-    @Autowired
-    private OrganizationDao organizationDao;
+    private final OrganizationDao organizationDao;
 
     @Scheduled(fixedRate = 3000)
     public void tokenChecker() {

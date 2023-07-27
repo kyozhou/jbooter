@@ -54,9 +54,9 @@ public class HttpResponseHandler implements ResponseBodyAdvice {
         }
     }
 
-    @ExceptionHandler(value = HttpException.class)
+    @ExceptionHandler(value = SysException.class)
     @ResponseBody
-    public ErrorInfoPo<String> jsonErrorHandler(HttpServletRequest req, HttpException e) {
+    public ErrorInfoPo<String> jsonErrorHandler(HttpServletRequest req, SysException e) {
         return this.httpError(e.getMessage());
     }
 
@@ -92,9 +92,9 @@ public class HttpResponseHandler implements ResponseBodyAdvice {
         return this.httpError("unknown_error");
     }
 
-    private ErrorInfoPo<String> httpError(String errorMessage) {
+    private ErrorInfoPo<String> httpError(String error) {
         ErrorInfoPo<String> errorInfoPo = new ErrorInfoPo<>();
-        errorInfoPo.setError(errorMessage);
+        errorInfoPo.setError(error);
         return errorInfoPo;
     }
 

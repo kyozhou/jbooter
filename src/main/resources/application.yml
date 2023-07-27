@@ -1,8 +1,18 @@
 spring:
     profiles:
         active: local
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://127.0.0.1:3306/jbooter
+        username: root
+        password: 123456
+
+    jpa:
+        hibernate:
+            ddl-auto: update
+            show-sql: true
 server:
-    port: 9019
+    port: 8001
 mybatis:
     configuration:
         mapUnderscoreToCamelCase: true

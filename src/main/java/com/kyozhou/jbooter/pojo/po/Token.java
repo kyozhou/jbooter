@@ -2,17 +2,25 @@ package com.kyozhou.jbooter.pojo.po;
 
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
 
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
 @Getter
 @Setter
-public class TokenPo {
+@Entity
+public class Token {
+    @Id
+    @Column(columnDefinition = "CHAR(36)")
     private String token;
-    private String orgUUID;
+    @Column(columnDefinition = "CHAR(36)")
+    private String orgUuid;
     private String service;
-    private String clientUUID;
+    @Column(columnDefinition = "CHAR(36)")
+    private String clientUuid;
     private Long timeCreated;
     private Long timeExpired;
 }
